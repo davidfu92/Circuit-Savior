@@ -4,7 +4,7 @@
 #include "opencv2/features2d/features2d.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/calib3d/calib3d.hpp"
-#include "opencv2/features2d/features2d.hpp"
+#include "opencv2/nonfree/nonfree.hpp"
 
 
 using namespace cv;
@@ -26,7 +26,7 @@ int main( int argc, char** argv )
   //-- Step 1: Detect the keypoints using SURF Detector
   int minHessian = 400;
 
-  SurfFeatureDetector detector( minHessian );
+  SurfFeatureDetector detector(minHessian);
 
   std::vector<KeyPoint> keypoints_object, keypoints_scene;
 
@@ -34,7 +34,7 @@ int main( int argc, char** argv )
   detector.detect( img_scene, keypoints_scene );
 
   //-- Step 2: Calculate descriptors (feature vectors)
-  SurfDescriptorExtractor extractor();
+  SurfDescriptorExtractor extractor;
 
   Mat descriptors_object, descriptors_scene;
 
