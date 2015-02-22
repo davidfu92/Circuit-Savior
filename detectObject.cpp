@@ -1,3 +1,4 @@
+#include <opencv/cv.h>
 #include <stdio.h>
 #include <iostream>
 #include "opencv2/core/core.hpp"

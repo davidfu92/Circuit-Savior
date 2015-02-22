@@ -63,7 +63,7 @@ int main( int argc, char** argv )
 
 	/// Wait until user exit program by pressing a key
 	waitKey(0);
-
+	imwrite("edgeonly.jpg", src);
 	return 0;
 }
 
