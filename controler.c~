@@ -16,7 +16,6 @@ int main() {
 	while(!digitalRead(8)) {
 
 	}
-loop_pi:
 	do {
 		while(!digitalRead(4)) {
 			digitalWrite(7, HIGH);	
@@ -27,9 +26,7 @@ loop_pi:
 		delay(1000);
 		digitalWrite(11, LOW);
 	}while(!digitalRead(8))
-	if(!digitalRead(8))
-		goto loop_pi;
-	return 0;
-}
+
+
 
 
